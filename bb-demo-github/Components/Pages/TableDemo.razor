@@ -9,6 +9,8 @@
        ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
        AutoGenerateColumns="true" EditMode="EditMode.Popup">
     <TableColumns>
+        <TableColumn @bind-Field="@context.Name" Text="姓名-Editable=true" Editable="true" />
+        <TableColumn @bind-Field="@context.Address" Text="地址-Editable=false" Editable="false" />
         <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
     </TableColumns>
 </Table>
