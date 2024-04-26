@@ -7,10 +7,11 @@
 <Table TItem="Foo" IsPagination="true" PageItemsSource="PageItemsSource" class="table-demo"
        IsStriped="true" IsBordered="true" ShowSkeleton="true" IsMultipleSelect="true"
        ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
-       AutoGenerateColumns="true" EditMode="EditMode.Popup">
+       AutoGenerateColumns="false" EditMode="EditMode.InCell">
+
     <TableColumns>
-        <TableColumn @bind-Field="@context.Name" Text="姓名-Editable=true" Editable="true" />
-        <TableColumn @bind-Field="@context.Address" Text="地址-Editable=false" Editable="false" />
-        <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
+        <TableColumn @bind-Field="@context.Name" Text="姓名-Readonly=true" Readonly="true" />
+        <TableColumn @bind-Field="@context.Address" Text="地址-未设置Filterable" />
+@*         <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" /> *@
     </TableColumns>
 </Table>
