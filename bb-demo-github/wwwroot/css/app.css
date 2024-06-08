@@ -118,7 +118,7 @@
 }
 
 .table-demo {
-    height: calc(100% - 56px);
+    height: calc(100vh - 162px);
 }
 
 .table-users-demo {

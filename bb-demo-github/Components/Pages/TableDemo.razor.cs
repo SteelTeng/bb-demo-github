@@ -24,5 +24,6 @@ namespace bb_demo_github.Components.Pages
         /// 
         /// </summary>
         private static IEnumerable<int> PageItemsSource => new int[] { 20, 40 };
+
     }
 }

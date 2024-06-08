@@ -19,21 +19,21 @@ namespace bb_demo_github.Data
         ///
         /// </summary>
         [Display(Name = "主键")]
-        [AutoGenerateColumn(Ignore = true)]
+        //[AutoGenerateColumn(Ignore = true)]
         public int Id { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [Required(ErrorMessage = "{0}不能为空")]
-        [AutoGenerateColumn(Order = 10, Filterable = true, Searchable = true)]
+        //[AutoGenerateColumn(Order = 10, Filterable = true, Searchable = true)]
         [Display(Name = "姓名")]
         public string? Name { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [AutoGenerateColumn(Order = 1, FormatString = "yyyy-MM-dd", Width = 180)]
+        //[AutoGenerateColumn(Order = 1, FormatString = "yyyy-MM-dd", Width = 180)]
         [Display(Name = "日期")]
         public DateTime DateTime { get; set; }
 
@@ -42,7 +42,7 @@ namespace bb_demo_github.Data
         /// </summary>
         [Display(Name = "地址")]
         [Required(ErrorMessage = "{0}不能为空")]
-        [AutoGenerateColumn(Order = 20, Filterable = true, Searchable = true)]
+        //[AutoGenerateColumn(Order = 20, Filterable = true, Searchable = true)]
         public string? Address { get; set; }
 
         /// <summary>
@@ -50,14 +50,14 @@ namespace bb_demo_github.Data
         /// </summary>
         [Display(Name = "数量")]
         [Required]
-        [AutoGenerateColumn(Order = 40, Sortable = true)]
+        //[AutoGenerateColumn(Order = 40, Sortable = true)]
         public int Count { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [Display(Name = "是/否")]
-        [AutoGenerateColumn(Order = 50, ComponentType = typeof(Switch))]
+        //[AutoGenerateColumn(Order = 50, ComponentType = typeof(Switch))]
         public bool Complete { get; set; }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace bb_demo_github.Data
         /// </summary>
         [Required(ErrorMessage = "请选择学历")]
         [Display(Name = "学历")]
-        [AutoGenerateColumn(Order = 60)]
+        //[AutoGenerateColumn(Order = 60)]
         public EnumEducation? Education { get; set; }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace bb_demo_github.Data
         /// </summary>
         [Required(ErrorMessage = "请选择一种{0}")]
         [Display(Name = "爱好")]
-        [AutoGenerateColumn(Order = 70)]
+        //[AutoGenerateColumn(Order = 70)]
         public IEnumerable<string> Hobby { get; set; } = new List<string>();
 
         private static readonly Random random = new();

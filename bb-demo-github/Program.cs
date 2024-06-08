@@ -17,6 +17,9 @@ builder.Services.AddSingleton<WeatherForecastService>();
 // 增加 Table 数据服务操作类
 builder.Services.AddTableDemoDataService();
 
+builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<AuthorizeService>();
+
 // 增加 SignalR 服务数据传输大小限制配置
 builder.Services.Configure<HubOptions>(option => option.MaximumReceiveMessageSize = null);
 
